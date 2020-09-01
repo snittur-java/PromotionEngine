@@ -32,7 +32,7 @@ public class BusinessPromotionEngineController {
 	@Autowired
 	PromotionValidator validator;
 	
-	@ApiOperation(value = "View a list of available products", response = Iterable.class)
+	@ApiOperation(value = "View a final price of added sdu in cart", response = Iterable.class)
 	@RequestMapping(value = "/price", method= RequestMethod.POST,produces = "application/json")
 	public BusinessPromotionResponseDataDTO getFinalPriceForItems(@RequestBody ItemOrderRequestDTO request) 
 			throws BusinessPromotionServiceException,BusinessPromotionValidationException{
